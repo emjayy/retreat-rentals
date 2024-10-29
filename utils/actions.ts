@@ -21,7 +21,6 @@ const getAuthUser = async () => {
 };
 
 const renderError = (error: unknown): { message: string } => {
-  console.log(error);
   return {
     message: error instanceof Error ? error.message : "An error occurred",
   };
@@ -147,8 +146,6 @@ export const createPropertyAction = async (
 
   try {
     const rawData = Object.fromEntries(formData);
-
-    console.log(rawData);
     const file = formData.get("image") as File;
 
     const validatedFields = validateWithZodSchema(propertySchema, rawData);
