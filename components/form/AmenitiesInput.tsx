@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { amenities, Amenity } from "@/utils/amenities";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@radix-ui/react-dropdown-menu";
 
 function AmenitiesInput({ defaultValue }: { defaultValue?: Amenity[] }) {
   const [selectedAmenities, setSelectedAmenities] = useState<Amenity[]>(
